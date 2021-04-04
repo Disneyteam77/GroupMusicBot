@@ -15,7 +15,7 @@ from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@Client.on_message(filters.audio & filters.via_bot & ~filters.private)
+@Client.on_message(filters.audio & ~filters.private)
 @errors
 async def play(_, message: Message):
 
