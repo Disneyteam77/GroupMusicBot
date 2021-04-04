@@ -44,7 +44,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         file_path = await converter.convert(
-            (await message.reply_to_message.download(file_name))
+            (await message.download(file_name))
             if not path.isfile(path.join("downloads", file_name)) else file_name
         )
     else:
