@@ -58,7 +58,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="https://telegra.ph/file/a4fa687ed647cfef52402.jpg",
         reply_markup=keyboard,
-        caption="▶️ **Auto Playing** here the song send by {} 😜".format(
+        caption="▶️ **Auto Playing** here the song sent by {} 😜".format(
         message.from_user.mention()
         ),
     )
