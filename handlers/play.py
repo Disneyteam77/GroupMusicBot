@@ -34,7 +34,7 @@ async def play(_, message: Message):
             ]
         )
 
-    audio = audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
+    audio = (message.audio or message.voice)
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
