@@ -34,8 +34,7 @@ async def play(_, message: Message):
             ]
         )
 
-    audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
-    url = get_url(message)
+    audio = (message) else None
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
@@ -48,8 +47,6 @@ async def play(_, message: Message):
             (await message.reply_to_message.download(file_name))
             if not path.isfile(path.join("downloads", file_name)) else file_name
         )
-    elif url:
-        file_path = await converter.convert(youtube.download(url))
     else:
         return await lel.edit_text("❗ You did not give me anything to play!")
 
