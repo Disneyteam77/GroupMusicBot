@@ -107,7 +107,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="🔊 Channel",
-                        url="https://t.me/Infinity_BOTs")
+                        url="https://t.me/disneygrou")
                    
                 ]
             ]
@@ -133,7 +133,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text="🔊 Channel",
-                            url=f"https://t.me/Infinity_BOTs")
+                            url=f"https://t.me/disneygrou")
 
                     ]
                 ]
@@ -246,7 +246,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {} via DaisyX Music 😜".format(
+        caption="▶️ **Playing** here the song requested by {} via Disney Team Music Streamer bot 😜".format(
         message.from_user.mention()
         ),
     )
